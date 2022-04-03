@@ -29,7 +29,33 @@ TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder. 
 
 ```dart
-const like = 'sample';
+class _MyHomePageState extends State<MyHomePage> {
+  List<String> imageList = [
+    "https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://images.pexels.com/photos/2899097/pexels-photo-2899097.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(),
+        body: ListView.builder(
+            itemCount: imageList.length,
+            itemBuilder: ((context, index) {
+              return SizedBox(
+                height: 300,
+                width: double.infinity,
+                child: FotoGallery(
+                  image: imageList[index],
+                  imageList: imageList,
+                  imgurl: imageList[index],
+                  index: index,
+                  fit: BoxFit.cover,
+                ),
+              );
+            })));
+  }
+}
 ```
 
 ## Additional information
