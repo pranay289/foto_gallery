@@ -29,6 +29,32 @@ TODO: Include short and useful examples for package users. Add longer examples
 to `/example` folder. 
 
 ```dart
+
+import 'package:flutter/material.dart';
+import 'package:foto_gallery/app/ui/pages/foto_gallery_page.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
 class _MyHomePageState extends State<MyHomePage> {
   List<String> imageList = [
     "https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -38,24 +64,28 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
-        body: ListView.builder(
-            itemCount: imageList.length,
-            itemBuilder: ((context, index) {
-              return SizedBox(
-                height: 300,
-                width: double.infinity,
-                child: FotoGallery(
-                  image: imageList[index],
-                  imageList: imageList,
-                  imgurl: imageList[index],
-                  index: index,
-                  fit: BoxFit.cover,
-                ),
-              );
-            })));
+      appBar: AppBar(),
+      body: ListView.builder(
+        itemCount: imageList.length,
+        itemBuilder: ((context, index) {
+          return SizedBox(
+            height: 300,
+            width: double.infinity,
+            child: FotoGallery(
+              image: imageList[index],
+              imageList: imageList,
+              imgurl: imageList[index],
+              index: index,
+              fit: BoxFit.cover,
+            ),
+          );
+        }),
+      ),
+    );
   }
 }
+
+
 ```
 
 ## Additional information
