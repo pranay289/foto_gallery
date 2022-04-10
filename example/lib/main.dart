@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foto_gallery/app/ui/pages/foto_gallery_page.dart';
+import 'package:foto_gallery/app/ui/pages/foto_gallery.dart';
 
 void main() {
   runApp(const MyApp());
