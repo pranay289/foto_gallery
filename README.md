@@ -2,6 +2,9 @@
 - For state management the `foto_gallery` package uses `GetX`.
 - You can also slide images using the keyboard.
 
+![](https://github.com/pranay289/foto_gallery/blob/master/foto_gallery_gif.gif)
+
+
 ## Using
 
 To import foto_gallery package.
@@ -53,4 +56,5 @@ FotoGallery(
      fit: BoxFit.cover,
  ),
 ```
+
 
