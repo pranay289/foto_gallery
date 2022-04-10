@@ -10,7 +10,7 @@
 To import foto_gallery package.
 
 ```
-import 'package:foto_gallery/app/ui/pages/foto_gallery_page.dart';
+import 'package:foto_gallery/foto_gallery.dart';
 ```
 The easiest way to use this package is if you are using listview then it will more easy for you.
 Here is example code.
@@ -18,7 +18,7 @@ Here is example code.
 ```dart
 
 import 'package:flutter/material.dart';
-import 'package:foto_gallery/app/ui/pages/foto_gallery_page.dart';
+import 'package:foto_gallery/foto_gallery.dart';
 
 ListView.builder(
         itemCount: imageList.length,
