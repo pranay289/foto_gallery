@@ -1,95 +1,56 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+- Foto gallery package will help you to create reactive image slider.
+- For state management the `foto_gallery` package uses `GetX`.
+- You can also slide images using the keyboard.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+## Using
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+To import foto_gallery package.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+```
+import 'package:foto_gallery/app/ui/pages/foto_gallery_page.dart';
+```
+The easiest way to use this package is if you are using listview then it will more easy for you.
+Here is example code.
 
 ```dart
 
 import 'package:flutter/material.dart';
 import 'package:foto_gallery/app/ui/pages/foto_gallery_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  List<String> imageList = [
-    "https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    "https://images.pexels.com/photos/2899097/pexels-photo-2899097.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    "https://images.pexels.com/photos/2820884/pexels-photo-2820884.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-  ];
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: ListView.builder(
+ListView.builder(
         itemCount: imageList.length,
         itemBuilder: ((context, index) {
-          return SizedBox(
+          return Container(
             height: 300,
             width: double.infinity,
-            child: FotoGallery(
-              image: imageList[index],
-              imageList: imageList,
-              imgurl: imageList[index],
-              index: index,
-              fit: BoxFit.cover,
+            padding: const EdgeInsets.all(30),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(30),
+              child: FotoGallery(
+                image: imageList[index],
+                imageList: imageList,
+                imgurl: imageList[index],
+                index: index,
+                fit: BoxFit.cover,
+              ),
             ),
           );
         }),
       ),
-    );
-  }
-}
-
 
 ```
+- If you can observe there are two options one is `image` and another one is `imgurl`.
+- The `image: imageList[index]` is used to provide a unique tag to the hero widget.
+- The other one which is `imgurl:imageList[index]` is use to provide imageUrl.
 
-## Additional information
+```
+FotoGallery(
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+     image: imageList[index], // To provide unique tag
+     imageList: imageList,
+     imgurl: imageList[index],
+     index: index,
+     fit: BoxFit.cover,
+ ),
+```
+
