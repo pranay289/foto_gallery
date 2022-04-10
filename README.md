@@ -1,6 +1,6 @@
 - Foto gallery package will help you to create reactive image slider.
 - For state management the `foto_gallery` package uses `GetX`.
-- You can also slide images using the keyboard.
+- You can also control image slider using the keyboard.
 
 ![](https://github.com/pranay289/foto_gallery/blob/master/foto_gallery_gif.gif)
 

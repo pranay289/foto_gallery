@@ -1,0 +1,24 @@
+{
+  "name": "foto_gallery",
+  "version": "1.0.0",
+  "description": "<!-- \r This README describes the package. If you publish this package to pub.dev,\r this README's contents appear on the landing page for your package.",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranay289/foto_gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranay289/foto_gallery/issues"
+  },
+  "homepage": "https://github.com/pranay289/foto_gallery#readme"
+}

@@ -77,10 +77,10 @@ packages:
   foto_gallery:
     dependency: "direct main"
     description:
-      path: "H:\\hero_image_cursole/hero_image_package\\foto_gallery\\"
-      relative: false
+      path: ".."
+      relative: true
     source: path
-    version: "0.0.1"
+    version: "0.0.2"
   get:
     dependency: transitive
     description:
